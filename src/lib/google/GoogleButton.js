@@ -13,7 +13,7 @@ const googleScriptId = 'google-login';
 // https://developers.google.com/identity/sign-in/web/reference#gapiauth2initparams
 
 /* global gapi */
-class GoogleSection extends React.Component {
+class GoogleButton extends React.Component {
 
     constructor(props, context) {
         super(props, context);
@@ -96,10 +96,10 @@ class GoogleSection extends React.Component {
     };
 };
 
-GoogleSection.propTypes = {
+GoogleButton.propTypes = {
     clientId: PropTypes.string.isRequired,
     onSuccess: PropTypes.func,
     onFailure: PropTypes.func,
 };
 
-export default GoogleSection;
+export default GoogleButton;

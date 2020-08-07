@@ -11,7 +11,7 @@ const facebookScriptId = 'facebook-login';
 // https://developers.facebook.com/apps/
 
 /*global FB*/
-class FacebookSection extends React.Component {
+class FacebookButton extends React.Component {
 
     componentDidMount = () => {
         var found = false;
@@ -84,10 +84,10 @@ class FacebookSection extends React.Component {
     }
 }
 
-FacebookSection.propTypes = {
+FacebookButton.propTypes = {
     appId: PropTypes.string.isRequired,
     onSuccess: PropTypes.func,
     onFailure: PropTypes.func
 };
 
-export default FacebookSection;
+export default FacebookButton;

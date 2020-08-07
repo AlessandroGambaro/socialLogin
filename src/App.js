@@ -1,7 +1,9 @@
 import React from 'react';
 
-import FacebookSection from './lib/facebook/FacebookSection';
-import GoogleSection from './lib/google/GoogleSection';
+import FacebookButton from './lib/facebook/FacebookButton';
+import GoogleButton from './lib/google/GoogleButton';
+
+import { FacebookButton as FacebookButtonLib, GoogleButton as GoogleButtonLib } from 'react-login-buttons';
 
 function App() {
 
@@ -39,10 +41,12 @@ function App() {
     <React.Fragment>
       <center>
         {/* OAuth 2.0 Client IDs, https://console.developers.google.com/apis/credentials does not work in Chrome */}
-        <GoogleSection clientId='733150640280-ov5eit9ar8dfmi838nr7ihqtaaoqcl00.apps.googleusercontent.com' onFailure={googleOnFailure} onSuccess={googleOnSuccess} />
+        {/* <GoogleButton clientId='733150640280-ov5eit9ar8dfmi838nr7ihqtaaoqcl00.apps.googleusercontent.com' onFailure={googleOnFailure} onSuccess={googleOnSuccess} /> */}
+        <GoogleButtonLib clientId='733150640280-ov5eit9ar8dfmi838nr7ihqtaaoqcl00.apps.googleusercontent.com' onFailure={googleOnFailure} onSuccess={googleOnSuccess} />
         <br />
-        {/* https://console.developers.google.com/apis/credentials */}
-        <FacebookSection appId='2351693135110867' onFailure={facebookOnFailure} onSuccess={facebookOnSuccess} />
+        {/* https://developers.facebook.com/apps */}
+        {/* <FacebookButton appId='2351693135110867' onFailure={facebookOnFailure} onSuccess={facebookOnSuccess} /> */}
+        <FacebookButtonLib appId='2351693135110867' onFailure={facebookOnFailure} onSuccess={facebookOnSuccess} />
       </center>
     </React.Fragment>
   );

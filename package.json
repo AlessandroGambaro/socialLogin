@@ -1,6 +1,6 @@
 {
-  "name": "login-button",
-  "version": "0.1.0",
+  "name": "react-login-buttons",
+  "version": "0.1.2",
   "author": "Alessandro Gambaro",
   "description": "In this library you can find two button that support you login using Google or Facebook.",
   "license": "MIT",
@@ -13,6 +13,7 @@
     "react-scripts": "3.4.1"
   },
   "dependencies": {
+    "react-login-buttons": "0.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
