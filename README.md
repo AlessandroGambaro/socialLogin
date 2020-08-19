@@ -1,26 +1,35 @@
 In this library you find two buttons that let you login using
 
  - facebook account
- - google account (actually does not work with Chrome)
+ - google account
+
+gapi does not work in chrome (most of all if chrome is managed by the organization) by default, to make it works:
+
+ * chrome://flags/ and set 'SameSite by default cookies' disabled
 
 ## Usage
-1. Installation
+1. Create credentials on 
+   * Facebook: https://developers.facebook.com/apps 
+   * Google: https://console.developers.google.com/apis/credentials
+             https://developers.google.com/identity/sign-in/web/reference
+
+2. Installation
  ```bash
 npm i react-login-buttons
  ```
 
-2. Import
+3. Import
  ```javascript
  import { FacebookButton, GoogleButton } from 'react-login-buttons';
  ```
 
- 3. Add buttons to the page
+4. Add buttons to the page
  ```javascript
 <GoogleButton clientId='Your OAuth 2.0 Client IDs' onFailure={googleOnFailure} onSuccess={googleOnSuccess} />
 <FacebookButton appId='Your Facebook App ID' onFailure={facebookOnFailure} onSuccess={facebookOnSuccess} />
  ```
 
-4. Define the function to manage the callbacks
+5. Define the function to manage the callbacks
 
 Google
 ```javascript
